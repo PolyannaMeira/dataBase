@@ -10,9 +10,9 @@ We need a platform that promotes in-person social activities, encouraging people
 and connect with each other.
 
 Goals:
-Promote in-person activities: Organize events, meetings and group activities.
-Foster interpersonal communication: Encourage face-to-face conversations and interactions.
-Create a sense of community: Bring together people with common interests.
+* Promote in-person activities: Organize events, meetings and group activities.
+* Foster interpersonal communication: Encourage face-to-face conversations and interactions.
+* Create a sense of community: Bring together people with common interests.
 
 The database for the Interact includes all entities necessary to facilitate the people to find people with similar 
 interests and do activities together. As such, included in the database's scope is:
@@ -134,14 +134,12 @@ as denoted by `DEFAULT (CURRENT_DATE)` statement.
 
 ## Optimizations
 
-In this section you should answer the following questions:
+Per the typical queries in queries.sql, it is common for database users to access activities based on dates and location. So to optimize the performance I create 2 indexes, one to quickly filter activities by date and another to quickly filter activities by location.
 
-* Which optimizations (e.g., indexes, views) did you create? Why?
-    * Strive to have at least one index and one view
+And to facilitate control of the number of participants and to make improvements in activities, I create a view that shows all registrations along with user and activity details.
+
 
 ## Limitations
 
-In this section you should answer the following questions:
+The database is not designed to handle messaging or chat functionality between users.
 
-* What are the limitations of your design?
-* What might your database not be able to represent very well?
